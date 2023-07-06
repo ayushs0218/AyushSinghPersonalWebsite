@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="style.css">
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+        $(document).ready(function() 
+        {
+            $(window).scroll(function(e) 
+            {
+                let s = $(window).scrollTop(),
+                    filterVal = s === 0 ? 0 : Math.ceil((s / 50));
+
+                $('.blur').css(
+                {
+                    'filter'         : 'blur(' + filterVal + 'px)',
+                    '-webkit-filter' : 'blur(' + filterVal + 'px)',
+                    '-moz-filter'    : 'blur(' + filterVal + 'px)',
+                    '-o-filter'      : 'blur(' + filterVal + 'px)',
+                    '-ms-filter'     : 'blur(' + filterVal + 'px)'
+                });
+            });
+        });
+    </script>
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -26,10 +45,13 @@
                 <a class="nav-link active" href="index.html"><b><u>Home</u></b></a>
             </li>
             <li>
+                <a class="nav-link active" href="AboutMe.html"><b><u>About Me</u></b></a>
+            </li>
+            <li>
                 <a class="nav-link active" href="Resume.html"><b><u>Resume</u></b></a>
             </li>
             <li>
-                <a class="nav-link active" href="Projects&Skills.html"><b><u>Projects & Skills</u></b></a>
+                <a class="nav-link active" href="Projects&Skills.html"><b><u>Projects</u></b></a>
             </li>
             <li>
                 <a class="nav-link active" href="Contact.html"><b><u>Contact</u></b></a>
@@ -39,7 +61,7 @@
 </nav>
 
 <body>
-    <div id="contact" class="pimg4">
+    <div id="contact" class="pimg4 blur">
         <div class="ptext">
             <span class="border">
                 Contact
@@ -83,10 +105,12 @@
 <footer >
     <div class="text-center">
             <a class="text-dark"  href="index.html"><b>Home</b></a> |
+
+            <a class="text-dark"  href="AboutMe.html"><b>About Me</b></a> |
     
             <a class="text-dark" href="Resume.html"><b>Resume</b></a> |
             
-            <a class="text-dark" href="Projects&Skills.html"><b>Projects & Skills</b></a> |
+            <a class="text-dark" href="Projects&Skills.html"><b>Projects</b></a> |
             
             <a class="text-dark" href="Contact.html"><b>Contact</b></a>
     </div>

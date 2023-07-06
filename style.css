@@ -1,3 +1,15 @@
+.div-img{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    padding-top:20%;
+}
+img{
+    transition: transform .2s;
+}
+img:hover{
+    transform:scale(1.25);
+}
 body, html
 {
     height: 100%;
@@ -13,7 +25,7 @@ nav, footer
     background-color: rgb(180, 180, 180);
     color: wheat;
 }
-.pimg1, .pimg2, .pimg3, .pimg4
+.pimg1, .pimg2, .pimg3, .pimg4, .pimg5
 {
     position: relative;
     opacity: 0.75;
@@ -22,29 +34,34 @@ nav, footer
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 .pimg1
 {
     background-image: url(LA.jpg);
     min-height: 100%;
+    
 }
 
 .pimg2
 {
     background-image: url(Griffith.jpg);
-    min-height: 600px;
+    min-height: 800px;
 }
 
 .pimg3
 {
     background-image: url(LA3.jpg);
-    min-height: 600px;
+    min-height: 800px;
 }
 
 .pimg4
 {
     background-image: url(LA4.jpg);
-    min-height: 600px;
+    min-height: 800px;
+}
+.pimg5
+{
+    background-image: url(SantaMonica.jpg);
+    min-height: 800px;
 }
 
 .section
